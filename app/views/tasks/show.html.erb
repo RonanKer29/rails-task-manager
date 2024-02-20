@@ -1,6 +1,13 @@
 <h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<%= check_box_tag "tasks[]", @task.id, @task.completed %>
-<p>This task is </p>
+<div class="task-details">
+  <p><%= @task.details %></p>
+</div>
+<div class="checkbox-show">
+  <div class="form-check">
+    <%= check_box_tag "tasks[]", @task.id, @task.completed, class: 'form-check-input', id: "task-#{@task.id}" %>
+    <%= label_tag "task-#{@task.id}", @task.completed ? 'This task is completed' : 'This task is not completed', class: 'form-check-label' %>
+  </div>
+</div>
 
-<%= link_to "Back to list", tasks_path %>
+<button type="button" class="btn btn-secondary"><%= link_to "Edit task", edit_task_path, class: "color-white" %></button>
+<button type="button" class="btn btn-primary"><%= link_to "Back to list", tasks_path, class: "color-white" %></button>

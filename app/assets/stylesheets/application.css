@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+.btn-primary .color-white,
+.btn-primary .color-white a {
+  color: white !important;
+  text-decoration: none;
+}
+.btn-secondary .color-white,
+.btn-secondary .color-white a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.task-title a {
+  text-decoration: none;
+  color: rgba(66, 87, 245, 0.735);
+  font-weight: bold;
+}
+
+.task-title {
+  margin-bottom: 15px;
+}
+
+.container h1 {
+  margin-bottom: 25px;
+}
+
+.task-details {
+  background-color: rgb(250, 242, 242);
+  padding: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 40px;
+}
+
+.checkbox-show {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+}
+
+.boutons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 10px;
+}
